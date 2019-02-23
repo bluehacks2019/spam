@@ -10,11 +10,11 @@
                     <h1  style="font-size:130px;text-align:center">Make something happen today!</h1>
                </div>
         </div>
-
+@if(Auth::user())
         {{ Form::open(['route' => 'activities.add', 'method' => 'patch']) }}
         {{ Form::hidden('user_id', Auth::user()->id) }}
         {{ Form::hidden('entry_id', 1) }}
-        
+
         <div class="row">
                 @for($i=0; $i<4; $i++)
                 <div class="col-sm-3" >
@@ -24,7 +24,7 @@
                         <h5 class="card-title" style = "display:inline-grid;">Card title</h5>
                         {{ Form::checkbox("box[]", $activities[$i]->id, $activities[$i]->finished) }}
                         {{$activities[$i]->name}} {{$activities[$i]->genre}}
-                            
+
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                         <h5 class="card-title" style = "display:inline-grid;">Card title</h5>
                         {{ Form::checkbox("box[]", $activities[$i]->id, $activities[$i]->finished) }}
                         {{$activities[$i]->name}} {{$activities[$i]->genre}}
-                            
+
                         </div>
                     </div>
                 </div>
@@ -47,6 +47,7 @@
         </div>
         {{ Form::submit('Click Me!') }}
         {!! Form::close() !!}
+       @endif
 
 </div>
 
