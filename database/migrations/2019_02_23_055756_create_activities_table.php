@@ -16,9 +16,7 @@ class CreateActivitiesTable extends Migration
         Schema::create('activities', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('genre');
-            $table->unsignedInteger('entry_id');
-            $table->foreign('entry_id')->references('id')->on('users');
+            $table->enum('genre', ['physical', 'social', 'intellectual', 'emotional']);
             $table->timestamps();
         });
     }
@@ -30,10 +28,6 @@ class CreateActivitiesTable extends Migration
      */
     public function down()
     {
-        Schema::table('activities', function (Blueprint $table) {
-            $table->dropForeign(['entry_id']);
-        });
-
         Schema::dropIfExists('activities');
     }
 }

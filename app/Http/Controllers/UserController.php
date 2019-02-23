@@ -22,8 +22,8 @@ class UserController extends Controller
     public function update(Request $request)
     {
         $user = DB::table('users')->where('id', $request->id)
-            ->update(['goal' => $request->goal]);
-
-            return redirect()->route('users.show');
+        ->update(['goal' => $request->goal]);
+        
+        return redirect()->route('users.show');
     }
 }

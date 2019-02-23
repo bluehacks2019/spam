@@ -32,3 +32,6 @@ Route::get('/profile', 'UserController@show')->name('users.show');
 Route::get('/profile/edit', 'UserController@edit')->name('users.edit');
 
 Route::patch('/profile/update', 'UserController@update')->name('users.update');
+
+Route::patch('/home/add', 'HomeController@addActivities')->name('activities.add');
+
