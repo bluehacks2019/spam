@@ -14,6 +14,8 @@
         {{ Form::open(['route' => 'activities.add', 'method' => 'patch']) }}
         {{ Form::hidden('user_id', Auth::user()->id) }}
         {{ Form::hidden('entry_id', 1) }}
+        <div>
+
 
         @if($activities)
         <div class="row">
@@ -22,7 +24,7 @@
                     <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="https://www.schiffner.com/wp-content/themes/schiff-responsive/images/noimage.jpg" alt="Card image cap">
                         <div class="card-body">
-                        <h5 class="card-title" style = "display:inline-grid;">{{$activities[$i]->name}} </h5>
+                        <h3 class="card-title" style = "display:inline-grid;">{{$activities[$i]->name}} </h3>
                         {{ Form::checkbox("box[]", $activities[$i]->id, $activities[$i]->finished) }}  <br/>
                         <p>
                              Lorem ipsum fafdsk fksldg jksdfjg fkd jsd ksjdLorem ipsum fafdsk fksldg jksdfjg fkd jsd ksjd
@@ -36,17 +38,16 @@
                 </div>
                 @endfor
         </div>
-        <div class="row">
+       <div class="row">
                 @for($i=4; $i<8; $i++)
                 <div class="col-sm-3" >
                     <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="https://www.schiffner.com/wp-content/themes/schiff-responsive/images/noimage.jpg" alt="Card image cap">
                         <div class="card-body">
-                        <h5 class="card-title" style = "display:inline-grid;">{{$activities[$i]->name}} </h5>
+                        <h3 class="card-title" style = "display:inline-grid;">{{$activities[$i]->name}} </h3>
                         {{ Form::checkbox("box[]", $activities[$i]->id, $activities[$i]->finished) }} <br/>
                         <p>
                              Lorem ipsum fafdsk fksldg jksdfjg fkd jsd ksjdLorem ipsum fafdsk fksldg jksdfjg fkd jsd ksjd
-
                         </p>
                         <span class="badge badge-secondary" style="float:right;">{{$activities[$i]->genre}}</span>
                         </div>
@@ -54,7 +55,12 @@
                 </div>
                 @endfor
         </div>
-        <button  type="submit" class="btn btn-primary btn-lg">Accomplish!</button>
+
+
+        <div style="margin:auto;">
+            <button  type="submit" class="btn btn-primary btn-lg">Accomplish!</button>
+        </div>
+
         @endif
         {!! Form::close() !!}
        @endif

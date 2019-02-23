@@ -49,7 +49,7 @@
                          <ul class="list-group list-group-flush" style="font-size:2em">
                               @if($activities)
                                  @foreach($activities as $a)
-                                 <li class="list-group-item">{{$a->name}}</li>
+                                 <li class="list-group-item">{{$a->name}}  <i class="fas fa-check-circle" style="float:right;color:#1ced68"></i></li>
                                  @endforeach
                              @endif
                          </ul>
