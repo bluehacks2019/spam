@@ -15,7 +15,7 @@
                    </div> -->
                    <div class = "col-sm-3" style="margin:auto">
                        <div style="margin:auto;">
-                            <div style="font-size:10em">
+                            <div style="font-size:12em">
                                  24
                             </div>
                             <div style="font-size:2em">

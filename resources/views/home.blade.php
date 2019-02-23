@@ -19,11 +19,16 @@
                 @for($i=0; $i<4; $i++)
                 <div class="col-sm-3" >
                     <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/exercise_card.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="https://www.schiffner.com/wp-content/themes/schiff-responsive/images/noimage.jpg" alt="Card image cap">
                         <div class="card-body">
-                        <h5 class="card-title" style = "display:inline-grid;">Card title</h5>
-                        {{ Form::checkbox("box[]", $activities[$i]->id, $activities[$i]->finished) }}
-                        {{$activities[$i]->name}} {{$activities[$i]->genre}}
+                        <h5 class="card-title" style = "display:inline-grid;">{{$activities[$i]->name}} </h5>
+                        {{ Form::checkbox("box[]", $activities[$i]->id, $activities[$i]->finished) }}  <br/>
+                        <p>
+                             Lorem ipsum fafdsk fksldg jksdfjg fkd jsd ksjdLorem ipsum fafdsk fksldg jksdfjg fkd jsd ksjd
+
+                        </p>
+                        <span class="badge badge-secondary" style="float:right;">{{$activities[$i]->genre}}</span>
+
 
                         </div>
                     </div>
@@ -34,12 +39,15 @@
                 @for($i=4; $i<8; $i++)
                 <div class="col-sm-3" >
                     <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="images/exercise_card.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="https://www.schiffner.com/wp-content/themes/schiff-responsive/images/noimage.jpg" alt="Card image cap">
                         <div class="card-body">
-                        <h5 class="card-title" style = "display:inline-grid;">Card title</h5>
-                        {{ Form::checkbox("box[]", $activities[$i]->id, $activities[$i]->finished) }}
-                        {{$activities[$i]->name}} {{$activities[$i]->genre}}
-
+                        <h5 class="card-title" style = "display:inline-grid;">{{$activities[$i]->name}} </h5>
+                        {{ Form::checkbox("box[]", $activities[$i]->id, $activities[$i]->finished) }} <br/>
+                        <p>
+                             Lorem ipsum fafdsk fksldg jksdfjg fkd jsd ksjdLorem ipsum fafdsk fksldg jksdfjg fkd jsd ksjd
+                    
+                        </p>
+                        <span class="badge badge-secondary" style="float:right;">{{$activities[$i]->genre}}</span>
                         </div>
                     </div>
                 </div>
