@@ -6,15 +6,18 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    You are logged in!
                     <a href={{ route('users.show') }} type="button" class="btn btn-default">go to profile</a>
+                    {{ Form::open(['route' => 'activities.add', 'method' => 'patch']) }}
+                    {{ Form::hidden('user_id', Auth::user()->id) }}
+                    {{ Form::hidden('entry_id', 1) }}
+                    @foreach($activities as $a)
+                    {{$a->name}} {{$a->genre}}
+                    {{ Form::checkbox("box[]", $a->id, $a->finished) }}
+                    @endforeach
+                    
+                    {{ Form::submit('Click Me!') }}
+
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>

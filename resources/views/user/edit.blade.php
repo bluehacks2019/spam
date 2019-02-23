@@ -1,7 +1,7 @@
 edit page
 <?php $user = Auth::user() ?>
 
-{{ Form::open(['route' => 'users.update', 'method' => 'patch']) }}
+{{ Form::open(['route' => 'users.update', 'method' => 'patch', 'files' => true]) }}
     
 <div class="form-body">
     <div class="row">
@@ -9,7 +9,8 @@ edit page
             <div class="form-group">
                 <label for="goal" class="control-label">goal</label>
                 {{ Form::hidden('id', $user->id) }}
-                {{ Form::textarea('goal', null, ['id' => 'goal', 'class' => 'form-control', 'rows' => 4]) }}
+                {{ Form::textarea('goal', $user->goal, ['id' => 'goal', 'class' => 'form-control', 'rows' => 4]) }}
+                {{ Form::file('image', ['class' => 'form-control']) }}	
             </div>
         </div>
     </div>
