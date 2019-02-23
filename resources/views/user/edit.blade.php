@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 edit page
 <?php $user = Auth::user() ?>
 
@@ -16,6 +19,8 @@ edit page
     </div>
 </div>
 
-{{ Form::submit('Click Me!') }}
+{{ Form::submit('Submit') }}
 
 {{ Form::close() }}
+
+@endsection
