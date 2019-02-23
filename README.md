@@ -7,11 +7,11 @@ Edit settings to fit your system
 - database name
 - database username and password
 
-Run the command "composer install"
+Run the command "composer update"
 Run the command "php artisan key:generate"
 Run the command "php artisan storage:link"
 
 Create a database with the name 
 Run the command "php artisan migrate:refresh"
 
-Run the command "php artisan:serve"
+Run the command "php artisan serve"
