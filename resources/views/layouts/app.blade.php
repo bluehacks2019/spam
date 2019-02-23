@@ -43,8 +43,8 @@
                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                          <a class="dropdown-item" href={{ route('home') }}>Home</a>
                          <a class="dropdown-item" href="#">My Day</a>
-                         <a class="dropdown-item" href="#">Progress</a>
-                         <a class="dropdown-item" href="#">History</a>
+                         <a class="dropdown-item" href={{ route('progress') }}>Progress</a>
+                         <a class="dropdown-item" href={{ route('history') }}>History</a>
 
 
                        </div>

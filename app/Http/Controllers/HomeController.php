@@ -26,4 +26,12 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function progress()
+    {
+        return view('progress');
+    }
+    public function history()
+    {
+        return view('history');
+    }
 }
