@@ -21,7 +21,7 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Styles -->
-    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -101,7 +101,37 @@
         <main class="py-4">
             @yield('content')
         </main>
-      
+
+        <div class="footer">
+            <div class="logo"></div>
+            <div class="footer-links-table">
+                <div class="footer-links-column">
+                    <div class="footer-links">
+                        <a>Emotional Wellness Activities</a>
+                    </div>
+                    <div class="footer-links">
+                        <a>Intellectual Wellness Activities</a>
+                    </div>
+                </div>
+                <div class="footer-links-column">
+                    <div class="footer-links">
+                        <a>Physical Wellness Activities</a>
+                    </div>
+                    <div class="footer-links">
+                        <a>Social Wellness Activities</a>
+                    </div>
+                </div>
+                <div class="footer-links-column">
+                    <div class="footer-links">
+                        <a>About</a>
+                    </div>
+                    <div class="footer-links">
+                        <a>Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>

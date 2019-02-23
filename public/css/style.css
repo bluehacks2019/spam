@@ -1,0 +1,146 @@
+.circle-text {
+width:50%;
+}
+.circle-text:after {
+content: "";
+display: block;
+width: 40%;
+height:0;
+padding-bottom: 40%;
+background: #4679BD;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+border-radius: 50%;
+}
+.circle-text div {
+float:left;
+width:40%;
+padding-top:20%;
+line-height:1em;
+margin-top:-0.5em;
+text-align:center;
+color:white;
+font-size: 200%;
+}
+
+/*
+leina's css */
+
+body {
+    margin: 0px 139px;
+    color:#434244;
+    background-color: #FEFEFE;
+}
+
+a {
+    font-family: "Rift Soft";
+    font-size: 15px;
+}
+
+/* history */
+
+.filter {
+    margin: 50px 0px;
+}
+
+.four-column-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.four-row-card {
+    background-color: #434244;
+    color: #FEFEFE;
+    height: 260px;
+    min-width: 260px;
+
+    margin-bottom: 50px;
+}
+
+.four-row-card.special {
+    border: 1px solid #434244;
+    color: #434244;
+    background-color: #FEFEFE;
+    height: 258px;
+    min-width: 260px;
+}
+
+.four-row-card .title {
+    font-family: "Rift Soft";
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.four-row-card .day {
+    font-family: "HWT Slab Antique";
+    font-size: 75px;
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+    margin-bottom: 8px;
+}
+
+.four-row-card .month {
+    font-family: "HWT Slab Antique";
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 33px;
+}
+
+.four-row-card.special .day-star {
+    display: flex;
+    justify-content: center;
+}
+
+.four-row-card.special .star {
+    background-image: url("/storage/icons/star-solid.png");
+    width: 20px;
+    height: 20px;
+    display: flex;
+    margin-top: 28px;
+}
+
+/* footer */
+
+.footer {
+    background-image: url("/storage/bg/footer-bg.png");
+    background-repeat: no-repeat;
+    margin: 0px -139px;
+    margin-top: 50px;
+    padding: 38px 139px;
+    width:100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.footer .logo {
+    background-image: url("/storage/icons/logo.png");
+    width: 65px;
+    height: 65px;
+    background-size: cover;
+    margin-bottom: 55px;
+}
+
+.footer-links-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-links-column {
+    padding-left: 70px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 15px;
+}
