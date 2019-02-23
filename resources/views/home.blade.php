@@ -45,7 +45,7 @@
                 </div>
                 @endfor
         </div>
-        {{ Form::submit('Click Me!') }}
+        <button  type="submit" class="btn btn-primary btn-lg">Accomplish!</button>
         {!! Form::close() !!}
        @endif
 
