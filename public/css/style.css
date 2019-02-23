@@ -1,5 +1,6 @@
 .circle-text {
 width:50%;
+font-size:5em;
 }
 .circle-text:after {
 content: "";
@@ -57,7 +58,7 @@ a {
     height: 260px;
     min-width: 260px;
 
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .four-row-card.special {
