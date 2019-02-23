@@ -17,6 +17,7 @@ class CreateActivitiesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->enum('genre', ['physical', 'social', 'intellectual', 'emotional']);
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
