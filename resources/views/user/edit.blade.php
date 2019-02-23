@@ -2,7 +2,7 @@ edit page
 <?php $user = Auth::user() ?>
 
 {{ Form::open(['route' => 'users.update', 'method' => 'patch']) }}
-    
+
 <div class="form-body">
     <div class="row">
         <div class="col-sm-12">
