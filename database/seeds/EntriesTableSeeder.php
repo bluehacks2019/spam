@@ -18,12 +18,15 @@ class EntriesTableSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        DB::table('entries')->insert([
+        for($i=0; $i<30; $i++){
+            DB::table('entries')->insert([
             'name' => 'untitled',
             'favorited' => false,
             'user_id' => 1,
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now(),
+            'created_at' => Carbon::now()->subDays($i),
+            'updated_at' => Carbon::now()->subDays($i),
         ]);
+            
+        }
     }
 }

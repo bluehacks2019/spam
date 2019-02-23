@@ -57,7 +57,10 @@ class HomeController extends Controller
     }
     public function history()
     {
-        return view('history');
+        $entries = DB::table('entries')->latest()->limit(16)
+        ->get();
+
+        return view('history', compact('entries'));
     }
     
 }
