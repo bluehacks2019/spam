@@ -41,7 +41,6 @@
                          <i class="fas fa-bars"></i>
                        </a>
                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                         <a class="dropdown-item" href={{ route('home') }}>Home</a>
                          <a class="dropdown-item" href={{ route('entries.show') }}>My Day</a>
                          <a class="dropdown-item" href={{ route('progress') }}>Progress</a>
                          <a class="dropdown-item" href={{ route('history') }}>History</a>
