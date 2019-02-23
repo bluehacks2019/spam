@@ -27,7 +27,7 @@ class HomeController extends Controller
     {
         $activities = DB::table('activity_entry')->where('entry_id', 1)
         ->join('activities','activity_entry.activity_id', '=', 'activities.id')
-        ->get();
+        ->get()->toArray();
 
         return view('home', compact('activities'));
     }
@@ -47,7 +47,7 @@ class HomeController extends Controller
 
         $activities = DB::table('activity_entry')->where('entry_id', 1)
         ->join('activities','activity_entry.activity_id', '=', 'activities.id')
-        ->get();
+        ->get()->toArray();
 
         return view('home', compact('activities'));
     }
@@ -58,7 +58,7 @@ class HomeController extends Controller
     public function history()
     {
         $entries = DB::table('entries')->latest()->limit(16)
-        ->get();
+        ->get()->toArray();
 
         return view('history', compact('entries'));
     }
