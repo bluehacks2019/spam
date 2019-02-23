@@ -15,6 +15,7 @@
         {{ Form::hidden('user_id', Auth::user()->id) }}
         {{ Form::hidden('entry_id', 1) }}
 
+        @if($activities)
         <div class="row">
                 @for($i=0; $i<4; $i++)
                 <div class="col-sm-3" >
@@ -45,7 +46,7 @@
                         {{ Form::checkbox("box[]", $activities[$i]->id, $activities[$i]->finished) }} <br/>
                         <p>
                              Lorem ipsum fafdsk fksldg jksdfjg fkd jsd ksjdLorem ipsum fafdsk fksldg jksdfjg fkd jsd ksjd
-                    
+
                         </p>
                         <span class="badge badge-secondary" style="float:right;">{{$activities[$i]->genre}}</span>
                         </div>
@@ -54,6 +55,7 @@
                 @endfor
         </div>
         <button  type="submit" class="btn btn-primary btn-lg">Accomplish!</button>
+        @endif
         {!! Form::close() !!}
        @endif
 

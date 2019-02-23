@@ -45,7 +45,11 @@ class HomeController extends Controller
              }
         }
 
-        return redirect()->route('home');
+        $activities = DB::table('activity_entry')->where('entry_id', 1)
+        ->join('activities','activity_entry.activity_id', '=', 'activities.id')
+        ->get();
+
+        return view('home', compact('activities'));
     }
     public function progress()
     {
@@ -55,8 +59,5 @@ class HomeController extends Controller
     {
         return view('history');
     }
-    public function myday()
-    {
-        return view('myday');
-    }
+    
 }
