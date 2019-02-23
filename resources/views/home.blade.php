@@ -8,7 +8,7 @@
 
         <div style="height: 400px;">
                <div>
-                    <h1  style="font-size:130px;text-align:center">Get something done today!</h1>
+                    <h1  style="font-size:130px;text-align:center">Make something happen today!</h1>
                </div>
         </div>
 

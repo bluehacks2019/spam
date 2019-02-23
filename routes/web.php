@@ -25,6 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/progress', 'HomeController@progress')->name('progress');
 Route::get('/history', 'HomeController@history')->name('history');
+Route::get('/myday', 'HomeController@myday')->name('myday');
 
 Route::get('/profile', 'UserController@show')->name('users.show');
 

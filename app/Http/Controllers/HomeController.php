@@ -34,4 +34,8 @@ class HomeController extends Controller
     {
         return view('history');
     }
+    public function myday()
+    {
+        return view('myday');
+    }
 }
