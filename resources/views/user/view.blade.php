@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 profile view page
 
 name
@@ -5,3 +8,4 @@ name
 
 goal
 {{Auth::user()->goal}}
+@endsection
