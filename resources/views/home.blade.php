@@ -15,6 +15,7 @@
         {{ Form::hidden('user_id', Auth::user()->id) }}
         {{ Form::hidden('entry_id', 1) }}
 
+        @if($activities)
         <div class="row">
                 @for($i=0; $i<4; $i++)
                 <div class="col-sm-3" >
@@ -45,6 +46,7 @@
                 </div>
                 @endfor
         </div>
+        @endif
         {{ Form::submit('Click Me!') }}
         {!! Form::close() !!}
        @endif
