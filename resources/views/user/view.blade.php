@@ -8,4 +8,7 @@ name
 
 goal
 {{Auth::user()->goal}}
+
+<a class="btn btn-default" href={{ route('users.edit') }}>Edit</a>
+
 @endsection

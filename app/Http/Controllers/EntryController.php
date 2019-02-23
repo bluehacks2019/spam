@@ -29,6 +29,6 @@ class EntryController extends Controller
         $entry = DB::table('entries')->where('id', $request->entry_id)
         ->update(['name' => $request->name]);
         
-        return redirect()->route('entries.show');
+        return redirect()->back();   
     }
 }

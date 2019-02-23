@@ -18,18 +18,14 @@ Route::get('/test', function () {
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::patch('/', 'HomeController@addActivities')->name('activities.add');
+
+Route::get('/profile', 'UserController@show')->name('users.show');
+Route::get('/profile/edit', 'UserController@edit')->name('users.edit');
+Route::patch('/profile/update', 'UserController@update')->name('users.update');
+
+Route::get('/myday', 'EntryController@show')->name('entries.show');
+Route::patch('/myday/update', 'EntryController@update')->name('entries.update');
 
 Route::get('/progress', 'HomeController@progress')->name('progress');
 Route::get('/history', 'HomeController@history')->name('history');
-
-Route::get('/profile', 'UserController@show')->name('users.show');
-
-Route::get('/profile/edit', 'UserController@edit')->name('users.edit');
-
-Route::patch('/profile/update', 'UserController@update')->name('users.update');
-
-Route::patch('/home/add', 'HomeController@addActivities')->name('activities.add');
-
-Route::get('/myday', 'EntryController@show')->name('entries.show');
-
-Route::patch('/myday/update', 'EntryController@update')->name('entries.update');
