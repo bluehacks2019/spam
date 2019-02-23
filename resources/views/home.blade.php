@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                     You are logged in!
+                    <a href={{ route('users.show') }} type="button" class="btn btn-default">go to profile</a>
                 </div>
             </div>
         </div>
