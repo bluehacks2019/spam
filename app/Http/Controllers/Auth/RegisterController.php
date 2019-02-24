@@ -73,6 +73,20 @@ class RegisterController extends Controller
         
         DB::table('entries')->insert([
             ['name' => 'Trip to San Francisco', 'favorited' => 0, 'user_id' => $user->id, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now()],
+            ['name' => 'Words of Radiance', 'favorited' => 1, 'user_id' => $user->id, 'created_at' => Carbon::now()->subDays(1), 'updated_at' => Carbon::now()->subDays(1)],
+            ['name' => 'Gotta Catch Em All', 'favorited' => 1, 'user_id' => $user->id, 'created_at' => Carbon::now()->subDays(2), 'updated_at' => Carbon::now()->subDays(2)],
+            ['name' => 'Meditation Class', 'favorited' => 1, 'user_id' => $user->id, 'created_at' => Carbon::now()->subDays(3), 'updated_at' => Carbon::now()->subDays(3)],
+            ['name' => 'Paint Me A Picture', 'favorited' => 0, 'user_id' => $user->id, 'created_at' => Carbon::now()->subDays(4), 'updated_at' => Carbon::now()->subDays(4)],
+            ['name' => 'Speak Now', 'favorited' => 0, 'user_id' => $user->id, 'created_at' => Carbon::now()->subDays(5), 'updated_at' => Carbon::now()->subDays(5)],
+            ['name' => 'A Lunch with Lola', 'favorited' => 1, 'user_id' => $user->id, 'created_at' => Carbon::now()->subDays(6), 'updated_at' => Carbon::now()->subDays(6)],
+            ['name' => 'Wednesday Workout', 'favorited' => 0, 'user_id' => $user->id, 'created_at' => Carbon::now()->subDays(7), 'updated_at' => Carbon::now()->subDays(7)],
+            ['name' => 'Fishing with Dad', 'favorited' => 1, 'user_id' => $user->id, 'created_at' => Carbon::now()->subDays(8), 'updated_at' => Carbon::now()->subDays(8)],
+            ['name' => 'Hackathon', 'favorited' => 0, 'user_id' => $user->id, 'created_at' => Carbon::now()->subDays(9), 'updated_at' => Carbon::now()->subDays(9)],
+            ['name' => 'Yoga with Mom', 'favorited' => 1, 'user_id' => $user->id, 'created_at' => Carbon::now()->subDays(10), 'updated_at' => Carbon::now()->subDays(10)],
+            ['name' => 'Where is the Love', 'favorited' => 0, 'user_id' => $user->id, 'created_at' => Carbon::now()->subDays(11), 'updated_at' => Carbon::now()->subDays(11)],
+            ['name' => 'Gym with my Cousins', 'favorited' => 0, 'user_id' => $user->id, 'created_at' => Carbon::now()->subDays(12), 'updated_at' => Carbon::now()->subDays(12)],
+            ['name' => 'Dinner with Prof', 'favorited' => 1, 'user_id' => $user->id, 'created_at' => Carbon::now()->subDays(13), 'updated_at' => Carbon::now()->subDays(13)],
+            ['name' => 'Trip to the Library', 'favorited' => 0, 'user_id' => $user->id, 'created_at' => Carbon::now()->subDays(14), 'updated_at' => Carbon::now()->subDays(14)],
             ]);
         
         $entry = DB::table('entries')->where('user_id', $user->id)->latest()->first();

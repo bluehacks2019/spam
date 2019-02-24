@@ -58,14 +58,14 @@ class HomeController extends Controller
     {
         $entry_id = DB::table('entries')->where('user_id', Auth::user()->id)->latest()->first()->id;
         $activitiesDone = DB::table('activity_entry')->where('entry_id', $entry_id)->where('finished', true)->count();
-        $entries = DB::table('entries')->where('id', 1)->get();
+        $entries = DB::table('entries')->where('id', $entry_id)->get();
         $dayStreak = 0;
         
         return view('progress', compact('activitiesDone', 'dayStreak'));
     }
     public function history()
     {
-        $entries = DB::table('entries')->latest()->limit(16)
+        $entries = DB::table('entries')->where('user_id', Auth::user()->id)->latest()->limit(16)
         ->get()->toArray();
 
         return view('history', compact('entries'));
