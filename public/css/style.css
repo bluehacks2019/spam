@@ -1,3 +1,13 @@
+@font-face {
+     font-family: 'RiftSoftBold';
+     src: url('fonts/RiftSoftBold.otf');
+}
+
+@font-face {
+     font-family: 'RiftSoft';
+     src: url('fonts/RiftSoftRegular.otf');
+}
+
 .circle-text {
 width:50%;
 font-size:5em;
@@ -48,8 +58,11 @@ font-size: 200%;
 /*
 leina's css */
 
+.card-title{
+     font-family: "RiftSoftBold";
+}
+
 body {
-    margin: 0px 139px;
     color:#434244;
     background-color: #FEFEFE;
 }
@@ -77,8 +90,6 @@ body, html {
   /* The image used */
   background-image: url("/storage/bg/home-bg.png");
 
-  /* Full height */
-  height: 100%;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -90,9 +101,6 @@ body, html {
   /* The image used */
   background-image: url("/storage/bg/my-day-bg.png");
 
-  /* Full height */
-  height: 100%;
-
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
@@ -102,9 +110,6 @@ body, html {
 .bg-profile {
   /* The image used */
   background-image: url("/storage/bg/my-profile-bg.png");
-
-  /* Full height */
-  height: 100%;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -139,7 +144,7 @@ body, html {
 }
 
 .four-row-card .title {
-    font-family: "Rift Soft";
+    font-family: "RiftSoft";
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -181,8 +186,7 @@ body, html {
 .footer {
     background-image: url("/storage/bg/footer-bg.png");
     background-repeat: no-repeat;
-    margin: 0px -139px;
-    margin-top: 50px;
+    margin: 0px 0px;
     padding: 38px 139px;
     width:100%;
     display: flex;
@@ -213,4 +217,20 @@ body, html {
     display: flex;
     justify-content: flex-end;
     padding-bottom: 15px;
+}
+
+.py-4{
+     padding:0px!important;
+}
+
+.bg {
+     padding-bottom: 125px;
+}
+
+.home-header-div {
+     padding-top:245px;
+}
+
+.card {
+     margin-bottom: 25px;
 }

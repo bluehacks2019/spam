@@ -4,10 +4,10 @@
 
 <div class="bg-myday">
 
-<div class="container">
+<div class="container" style="padding-top: 70px;">
 
-               <div class='card' style="min-height: 32em">
-                    <div class="card-header" style="text-align:center;background-color:none">
+               <div class='card' style="min-height: 32em; background:none">
+                    <div class="card-header" style="text-align:center;background-color:#FEFEFE">
                          <div >
                               <h1 style = "font-size:4em;font-family:'HWT Slab'"  >{{$entry->name}}</h1>
 

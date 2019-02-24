@@ -5,11 +5,11 @@
 <div class="bg">
 
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center home-header-div">
 
-        <div style="height: 400px;">
+        <div style="height: 400px; margin-bottom:200px;">
                <div>
-                    <h1  style=" font-family:'HWT Slab';font-size:130px;text-align:center">make something happen today!</h1>
+                    <h1  style=" font-family:'HWT Slab';font-size:130px;text-align:left">make<br  />something happen<br  />today.</h1>
                </div>
         </div>
 @if($activities)
@@ -26,7 +26,7 @@
                     <div class="card" style="width: 18rem;min-height:35em;">
                     <img class="card-img-top" src="https://www.schiffner.com/wp-content/themes/schiff-responsive/images/noimage.jpg" alt="Card image cap">
                         <div class="card-body">
-                        <h3 class="card-title" style = "font-family:'RiftSoftBold';display:inline-grid;">{{$activity->name}} </h3>
+                        <h3 class="card-title" style = "font-size: 20px;text-transform: uppercase;display:inline-grid;">{{$activity->name}} </h3>
                         {{ Form::checkbox("box[]", $activity->id, $activity->finished) }}  <br/>
                         <p>
                              {{$activity->description}}
@@ -40,8 +40,8 @@
         </div>
         @endforeach
 
-        <div style="margin:auto;">
-            <button  type="submit" class="btn btn-primary btn-lg">Accomplish!</button>
+        <div style="display:flex; justify-content:center;">
+            <button  type="submit" class="btn btn-primary btn-lg" style="background-color:#0e2369;border:0px;">Accomplish!</button>
         </div>
 
         {!! Form::close() !!}
