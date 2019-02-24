@@ -38,3 +38,11 @@ For first timers,
     ```
     
 Made using PHP and Laravel, with 
+
+#### Team
+>Team Name: spam
+>Members:
+>Cher Panlilio
+>Leina Santiago
+>Deion Menor
+>Aaron See
