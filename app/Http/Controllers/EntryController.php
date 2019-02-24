@@ -13,7 +13,7 @@ class EntryController extends Controller
     {
         //set to 1 for dummy data
         $entry_id = DB::table('entries')->where('user_id', Auth::user()->id)->latest()->first()->id;
-        $entry = DB::table('entries')->where('id', $entry_id)->first();
+        $entry = DB::table('entries')->where('id', $entry_id)->latest()->first();
         $activities = DB::table('activity_entry')->where('entry_id', $entry_id)->where('finished', true)
         ->join('activities','activity_entry.activity_id', '=', 'activities.id')
         ->get();
@@ -29,7 +29,7 @@ class EntryController extends Controller
     {
         $entry = DB::table('entries')->where('id', $request->entry_id)
         ->update(['name' => $request->name]);
-        
-        return redirect()->back();   
+
+        return redirect()->back();
     }
 }

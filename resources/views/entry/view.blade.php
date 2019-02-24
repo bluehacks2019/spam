@@ -76,7 +76,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
           <div class="modal-body">
-          {{ Form::hidden('entry_id', 1) }}
+          {{ Form::hidden('entry_id', $entry->id) }}
           {{ Form::text('name', $entry->name, ['id' => 'goalname', 'class' => 'form-control']) }}
           </div>
           <div class="modal-footer">
