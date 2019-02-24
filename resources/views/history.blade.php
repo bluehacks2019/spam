@@ -9,8 +9,8 @@
                       <!-- <div class="four-column-row"> -->
                          <div class="four-row-card">
                              <div class="title">{{$entry->name}}</div>
-                             <div class="day">{{Carbon\Carbon::parse($entry->created_at)->format('d')}}</div>
-                             <div class="month">{{Carbon\Carbon::parse($entry->created_at)->format('F')}}</div>
+                             <div class="day"  style = "font-family:'HWT Slab'">{{Carbon\Carbon::parse($entry->created_at)->format('d')}}</div>
+                             <div class="month"  style = "font-family:'HWT Slab'">{{Carbon\Carbon::parse($entry->created_at)->format('F')}}</div>
                          </div>
                  @endforeach
                     </div>

@@ -8,7 +8,7 @@
                <div class='card' style="min-height: 32em">
                     <div class="card-header" style="text-align:center">
                          <div>
-                              <h1>{{$entry->name}}</h1>
+                              <h1 style = "font-size:4em;font-family:'HWT Slab'" >{{$entry->name}}</h1>
 
                               <!-- Button trigger modal -->
                                <button type="button" class="btn btn-primary btn-lg" style="float:right;" data-toggle="modal" data-target="#myModal">
@@ -26,7 +26,7 @@
                    </div> -->
                    <div class = "col-sm-3" style="margin:auto">
                        <div style="margin:auto;">
-                            <div style="font-size:12em">
+                            <div style="font-size:12em;font-family:'HWT Slab'">
                                  {{$day}}
 
                             </div>
@@ -43,7 +43,7 @@
 
                    <div class = "col-sm-6" style = "">
                         <div style="text-align: center;padding-bottom:2em;">
-                            <span style="font-size:4em">{{$activities->count()}}</span> <br /> activities accomplished today!
+                            <span style="font-size:4em;font-family:'HWT Slab'">{{$activities->count()}}</span> <br /> activities accomplished today!
                         </div>
                        <div class="card task" style="width: 25rem; margin:auto;text-align:center ">
                          <ul class="list-group list-group-flush" style="font-size:2em">

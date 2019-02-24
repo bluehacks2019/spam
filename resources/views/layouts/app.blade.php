@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+      <title>Swell | make something happen today! </title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -19,6 +19,19 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <!-- fonts -->
+   <link href="//db.onlinewebfonts.com/c/c6f66d3eac0eca1304d31ffea83f5380?family=HWT+Slab" rel="stylesheet" type="text/css"
+   @import url(//db.onlinewebfonts.com/c/c6f66d3eac0eca1304d31ffea83f5380?family=HWT+Slab);
+   @font-face {font-family: "HWT Slab";
+         src: url("//db.onlinewebfonts.com/t/c6f66d3eac0eca1304d31ffea83f5380.eot");
+     }
+   @font-face {
+         font-family: 'RiftSoftBold';
+         font-weight: bold;
+     }
+
 
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
@@ -40,10 +53,10 @@
                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                          <i class="fas fa-bars"></i>
                        </a>
-                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                         <a class="dropdown-item" href={{ route('entries.show') }}>My Day</a>
-                         <a class="dropdown-item" href={{ route('progress') }}>Progress</a>
-                         <a class="dropdown-item" href={{ route('history') }}>History</a>
+                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                         <a class="dropdown-item" style = "font-family:'HWT Slab'" href={{ route('entries.show') }}>My Day</a>
+                         <a class="dropdown-item" style = "font-family:'HWT Slab'" href={{ route('progress') }}>My Profile</a>
+                         <a class="dropdown-item" style = "font-family:'HWT Slab'" href={{ route('history') }}>My Daily Progress</a>
 
 
                        </div>

@@ -7,7 +7,7 @@
 
         <div style="height: 400px;">
                <div>
-                    <h1  style="font-size:130px;text-align:center">Make something happen today!</h1>
+                    <h1  style=" font-family:'HWT Slab';font-size:130px;text-align:center">make something happen today!</h1>
                </div>
         </div>
 @if(Auth::user())
@@ -24,7 +24,7 @@
                     <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="https://www.schiffner.com/wp-content/themes/schiff-responsive/images/noimage.jpg" alt="Card image cap">
                         <div class="card-body">
-                        <h3 class="card-title" style = "display:inline-grid;">{{$activity->name}} </h3>
+                        <h3 class="card-title" style = "font-family:'RiftSoftBold';display:inline-grid;">{{$activity->name}} </h3>
                         {{ Form::checkbox("box[]", $activity->id, $activity->finished) }}  <br/>
                         <p>
                              Lorem ipsum fafdsk fksldg jksdfjg fkd jsd ksjdLorem ipsum fafdsk fksldg jksdfjg fkd jsd ksjd
@@ -37,7 +37,7 @@
                 @endforeach
         </div>
         @endforeach
-       
+
         <div style="margin:auto;">
             <button  type="submit" class="btn btn-primary btn-lg">Accomplish!</button>
         </div>

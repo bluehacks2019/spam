@@ -2,6 +2,11 @@
 width:50%;
 font-size:5em;
 }
+
+.class {
+	font-family: Segoe UI;
+}
+
 .circle-text:after {
 content: "";
 display: block;
@@ -24,6 +29,22 @@ color:white;
 font-size: 200%;
 }
 
+
+   .circle-border{
+         height: 200px;
+         width: 200px;
+         display: table-cell;
+         text-align: center;
+         vertical-align: middle;
+         border-radius: 50%;
+         background: #EACA52;
+          font-size: 80px;
+   }
+   .rounded-circle{
+       height: 220px;
+       width: 220px;
+   }
+
 /*
 leina's css */
 
@@ -34,7 +55,7 @@ body {
 }
 
 a {
-    font-family: "Rift Soft";
+    font-family: "RiftSoftBold";
     font-size: 15px;
 }
 
@@ -44,9 +65,13 @@ a {
     margin: 50px 0px;
 }
 
+.row-container{
+     width:600px;
+}
+
 .four-column-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: stretch;
     flex-direction: row;
     flex-wrap: wrap;
