@@ -53,7 +53,11 @@ class HomeController extends Controller
     }
     public function progress()
     {
-        return view('progress');
+        $activitiesDone = DB::table('activity_entry')->where('finished', true)->count();
+        $entries = DB::table('entries')->where('id', 1)->get();
+        $dayStreak = 0;
+        
+        return view('progress', compact('activitiesDone', 'dayStreak'));
     }
     public function history()
     {

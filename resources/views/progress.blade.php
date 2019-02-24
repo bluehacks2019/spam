@@ -32,8 +32,8 @@
 
 <!-- <div class="d-flex flex-column">
    <div class="d-flex flex-lg-row justify-content-center" style = "text-align: center;">
-      <div class="p-2 circle-text"><div>25</div></div>
-      <div class="p-2 circle-text"><div>23</div></div>
+      <div class="p-2 circle-text"><div>{{$activitiesDone}}</div></div>
+      <div class="p-2 circle-text"><div>1</div></div>
    </div>
 </div>
 
