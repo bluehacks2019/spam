@@ -36,8 +36,8 @@ For first timers,
     ```
     php artisan db:seed
     ```
-    
-Made using PHP and Laravel, with 
+
+Made using PHP and Laravel with love.
 
 #### Team
 >Team Name: spam
