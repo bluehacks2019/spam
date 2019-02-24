@@ -10,7 +10,7 @@
                     <h1  style=" font-family:'HWT Slab';font-size:130px;text-align:center">make something happen today!</h1>
                </div>
         </div>
-@if(Auth::user())
+@if($activities)
         {{ Form::open(['route' => 'activities.add', 'method' => 'patch']) }}
         {{ Form::hidden('user_id', Auth::user()->id) }}
         {{ Form::hidden('entry_id', 1) }}
@@ -27,7 +27,7 @@
                         <h3 class="card-title" style = "font-family:'RiftSoftBold';display:inline-grid;">{{$activity->name}} </h3>
                         {{ Form::checkbox("box[]", $activity->id, $activity->finished) }}  <br/>
                         <p>
-                             Lorem ipsum fafdsk fksldg jksdfjg fkd jsd ksjdLorem ipsum fafdsk fksldg jksdfjg fkd jsd ksjd
+                             {{$activity->description}}
 
                         </p>
                         <span class="badge badge-secondary" style="float:right;">{{$activity->genre}}</span>
