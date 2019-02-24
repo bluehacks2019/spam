@@ -2,16 +2,17 @@
 
 @section('content')
 
+<div class="bg-myday">
 
 <div class="container">
 
                <div class='card' style="min-height: 32em">
-                    <div class="card-header" style="text-align:center">
-                         <div>
-                              <h1 style = "font-size:4em;font-family:'HWT Slab'" >{{$entry->name}}</h1>
+                    <div class="card-header" style="text-align:center;background-color:none">
+                         <div >
+                              <h1 style = "font-size:4em;font-family:'HWT Slab'"  >{{$entry->name}}</h1>
 
                               <!-- Button trigger modal -->
-                               <button type="button" class="btn btn-primary btn-lg" style="float:right;" data-toggle="modal" data-target="#myModal">
+                               <button type="button" class="btn btn-primary btn-lg" style="float:right;display:inline-block;" data-toggle="modal" data-target="#myModal">
                                        edit
                               </button>
 
@@ -60,6 +61,8 @@
 
 
 </div>
+</div>
+
 
 <!-- Modal -->
 {{ Form::open(['route' => 'entries.update', 'method' => 'patch']) }}
