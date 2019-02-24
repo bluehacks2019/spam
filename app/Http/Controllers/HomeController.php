@@ -25,7 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $activities = DB::table('activity_entry')->where('entry_id', 1)
+        $entry_id = DB::table('entries')->where('user_id', Auth::user()->id)->latest()->first()->id;
+        $activities = DB::table('activity_entry')->where('entry_id', $entry_id)
         ->join('activities','activity_entry.activity_id', '=', 'activities.id')
         ->get()->toArray();
 
@@ -34,7 +35,8 @@ class HomeController extends Controller
 
     public function addActivities(Request $request)
     {
-        DB::table('activity_entry')->where('entry_id', 1)
+        $entry_id = DB::table('entries')->where('user_id', Auth::user()->id)->latest()->first()->id;
+        DB::table('activity_entry')->where('entry_id', $entry_id)
         ->update(['finished' => false]);
 
         if($request->box){
@@ -45,7 +47,8 @@ class HomeController extends Controller
              }
         }
 
-        $activities = DB::table('activity_entry')->where('entry_id', 1)
+        $entry_id = DB::table('entries')->where('user_id', Auth::user()->id)->latest()->first()->id;
+        $activities = DB::table('activity_entry')->where('entry_id', $entry_id)
         ->join('activities','activity_entry.activity_id', '=', 'activities.id')
         ->get()->toArray();
 
@@ -53,7 +56,8 @@ class HomeController extends Controller
     }
     public function progress()
     {
-        $activitiesDone = DB::table('activity_entry')->where('finished', true)->count();
+        $entry_id = DB::table('entries')->where('user_id', Auth::user()->id)->latest()->first()->id;
+        $activitiesDone = DB::table('activity_entry')->where('entry_id', $entry_id)->where('finished', true)->count();
         $entries = DB::table('entries')->where('id', 1)->get();
         $dayStreak = 0;
         

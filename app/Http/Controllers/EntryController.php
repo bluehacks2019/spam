@@ -12,8 +12,9 @@ class EntryController extends Controller
     public function show()
     {
         //set to 1 for dummy data
-        $entry = DB::table('entries')->where('id', 1)->first();
-        $activities = DB::table('activity_entry')->where('entry_id', 1)->where('finished', true)
+        $entry_id = DB::table('entries')->where('user_id', Auth::user()->id)->latest()->first()->id;
+        $entry = DB::table('entries')->where('id', $entry_id)->first();
+        $activities = DB::table('activity_entry')->where('entry_id', $entry_id)->where('finished', true)
         ->join('activities','activity_entry.activity_id', '=', 'activities.id')
         ->get();
 

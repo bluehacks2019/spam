@@ -25,17 +25,13 @@ For first timers,
     php artisan storage:link
     ```
 
-1. Run the following commands
+1. Start the server and run migration files
     ```
     php artisan serve
     php artisan migrate
     ```
-2. Go to the webstire and register as a user
-3. Populate the database with the .sql files inside the _sqlData folder
-4. Run the command
-    ```
-    php artisan db:seed
-    ```
+2. Populate the database with populate.sql inside the _sqlData folder
+3. Go to the website and register as a user
 
 Made using PHP and Laravel with love.
 

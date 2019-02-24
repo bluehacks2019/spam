@@ -11,7 +11,7 @@
     </div>
     <div class = "row">
         <div class= "col-sm-6" align = "center">
-            <p class = "circle-border" style="font-family:'HWT Slab'">24</p>
+            <p class = "circle-border" style="font-family:'HWT Slab'">{{$activitiesDone}}</p>
         </div>
         <div class= "col-sm-6" align = "center">
             <p class = "circle-border"  style="font-family:'HWT Slab'">16</p>
