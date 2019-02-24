@@ -21,7 +21,7 @@
         <div class="row">
                 @foreach($chunk as $activity)
                 <div class="col-sm-3" >
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 18rem;min-height:35em;">
                     <img class="card-img-top" src="https://www.schiffner.com/wp-content/themes/schiff-responsive/images/noimage.jpg" alt="Card image cap">
                         <div class="card-body">
                         <h3 class="card-title" style = "font-family:'RiftSoftBold';display:inline-grid;">{{$activity->name}} </h3>
